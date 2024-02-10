@@ -1,5 +1,5 @@
-import json
 def inscripciones ():
+    import json
     x = open ('inscritos.json')
     mijson= json.load(x)
 
