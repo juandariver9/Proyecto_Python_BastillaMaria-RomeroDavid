@@ -12,6 +12,18 @@
         "Celular": 2,
         "Telefono": 2,
         "Estado": "Inscrito"
+      },
+      {
+        "id": 2,
+        "Identificacion": 2054646200,
+        "Nombre": "Karen Daniela",
+        "Apellido1": "Qui\u00f1onez",
+        "Apellido2": "Villamizar",
+        "Direccion": "manz i casa 14 villa luz ",
+        "Acudiente": "Lubin ",
+        "Celular": 21654789,
+        "Telefono": 656223,
+        "Estado": "Inscrito"
       }
     ]
   }

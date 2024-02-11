@@ -1,12 +1,11 @@
-import json
 import os
-
+import CampersCRUD
+import TrainersCRUD
 print("**************************************************")
 print("*                   Bienvenido                   *")
 print("**************************************************")
 
 def limpiar_terminal():
-    # Verificar el sistema operativo actual
     if os.name == 'nt':  # Windows
         os.system('cls')
     else:  # Linux y macOS
@@ -17,7 +16,7 @@ while True:
     print("Cual es tu ROL en CAMPUSLANDS")
     print("\n1. Coordinador\t 2. Trainer\t 3. Salir")
     print(" ")
-    Rol = int(input("------>"))
+    Rol = int(input("--->"))
     if Rol == 1:
         while True:
             limpiar_terminal()
@@ -29,9 +28,8 @@ while True:
             print(" ")
             print("1. Camper\t2. Trainer\t")
             print("")
-            print("3. Reportes\t4. Rutas \t")
+            print("3. Reportes\t4. Ir al modulo anterior\t")
             print(" ")
-            print("5. Ir al modulo anterior")
             decision = int(input("--->"))
             
             if decision == 1:
@@ -47,9 +45,14 @@ while True:
                 decision_camper = int(input("--->"))
 
                 if decision_camper == 1:
-                    print("Inscribir Camper")
+                    limpiar_terminal()
+                    print("Inscribir Camper\n")
+                    print(CampersCRUD.MainCamperAñadir())
+                    
                 elif decision_camper == 2:
+                    limpiar_terminal()
                     print("Matricular Camper")
+                    print(CampersCRUD.MainCamperAprobados())
                 elif decision_camper == 3:
                     print("Rendimiento Camper")
                 elif decision_camper == 4:
@@ -71,6 +74,7 @@ while True:
 
                 if decision == 1:
                     print("Añadir Trainer")
+                    print(TrainersCRUD.MainTrainersAñadir())
                 elif decision == 2:
                     print("Eliminar Trainer")
                 elif decision == 3:
@@ -112,19 +116,9 @@ while True:
                 else:
                     print("Opción inválida")
             elif decision == 4:
-                print("**************************************************")
-                print("*                MODULO RUTAS                    *")
-                print("**************************************************")
-                print("")
-                print("1. Añadir Rutas  \t 2. Ir al modulo anterior")
-                print(" ")
-                decision_ruta=int(input("------>"))
-
-                
-            elif decision==5:
                 break
-            else :
-             print("opcion no valida")
+            else:
+                print("Decision no valida")
     elif Rol == 2:
         while True:
             limpiar_terminal()

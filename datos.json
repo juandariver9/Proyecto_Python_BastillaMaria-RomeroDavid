@@ -1,0 +1,46 @@
+{
+  "Datos": {
+    "Matriculados": [
+      {
+        "Nombre": "2",
+        "Apellido1": "2",
+        "Apellido2": "2",
+        "Direccion": "3",
+        "Nombre Acudiente": "",
+        "Celular": 2,
+        "Telefono": 2,
+        "Estado": "Aprobado",
+        "Fecha de inicio": "12-03-2003",
+        "Fecha de finalizacion": "12-01-2004"
+      },
+      {
+        "Nombre": "Juan",
+        "Apellido1": "Rivero",
+        "Apellido2": "Romero",
+        "Direccion": "4",
+        "Nombre Acudiente": "",
+        "Celular": 5,
+        "Telefono": 6,
+        "Estado": "Aprobado",
+        "Fecha de inicio": "12-03-2008",
+        "Fecha de finalizacion": "12-03-2009"
+      }
+      
+    ],
+    "Trainer" : [
+      {
+        "Nombre": "Juan",
+        "Apellido1": "Rivero",
+        "Apellido2": "Romero",
+        "Direccion": "4",
+        "Nombre Acudiente": "",
+        "Celular": 5,
+        "Telefono": 6,
+        "Estado": "Aprobado",
+        "Fecha de inicio": "12-03-2008",
+        "Fecha de finalizacion": "12-03-2009"
+      }
+    ]
+      
+  }
+}
