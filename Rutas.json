@@ -1,0 +1,29 @@
+{
+    "Rutas": {
+      "Ruta_java": [
+        {
+          "Trainer_Principal": "pedro",
+          "Salones_ruta_Java": "P1, P2, P3, P4"
+        }
+
+        
+      ],
+
+      "Ruta_NetCore":[
+        {
+            "Trainer_Principal": "Miguel",
+            "Salones_ruta_NetCore":"M1 , M2 , M3 , M4"
+        }
+      ],
+
+      "Ruta_Nodecore":[
+        {
+            "Trainer_Principal": "Jholver",
+            "Salones_ruta_Nodecore": "J1 , J2 , J3 ,J4"
+        }
+
+
+      ]
+    }
+  }
+  
