@@ -77,6 +77,7 @@ while True:
                     print(TrainersCRUD.MainTrainersAñadir())
                 elif decision == 2:
                     print("Eliminar Trainer")
+                    print(TrainersCRUD.MainTrainersEliminar())
                 elif decision == 3:
                     print("Asignar Trainer")
                 elif decision == 4:
