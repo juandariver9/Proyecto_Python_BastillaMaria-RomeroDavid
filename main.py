@@ -29,8 +29,9 @@ while True:
             print(" ")
             print("1. Camper\t2. Trainer\t")
             print("")
-            print("3. Reportes\t4. Ir al modulo anterior\t")
+            print("3. Reportes\t4. Rutas \t")
             print(" ")
+            print("5. Ir al modulo anterior")
             decision = int(input("--->"))
             
             if decision == 1:
@@ -111,9 +112,19 @@ while True:
                 else:
                     print("Opción inválida")
             elif decision == 4:
+                print("**************************************************")
+                print("*                MODULO RUTAS                    *")
+                print("**************************************************")
+                print("")
+                print("1. Añadir Rutas  \t 2. Ir al modulo anterior")
+                print(" ")
+                decision_ruta=int(input("------>"))
+
+                
+            elif decision==5:
                 break
-            else:
-                print("Decision no valida")
+            else :
+             print("opcion no valida")
     elif Rol == 2:
         while True:
             limpiar_terminal()
