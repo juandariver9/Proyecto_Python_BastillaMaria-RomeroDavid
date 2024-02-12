@@ -3,9 +3,9 @@ def MainTrainersAñadir():
     import json
     with open('datos.json', 'r', encoding="utf8") as file:
         mijson = json.load(file)
-    
-        
+    nuevo_id = max([inscripcion["id"] for inscripcion in mijson['Datos']['Trainer']], default=0) + 1
     nueva_inscripcion = {}
+    nueva_inscripcion['id'] = nuevo_id
     nueva_inscripcion['Identificacion'] = int(input("Escriba el número de identificación: "))
     nueva_inscripcion['Nombre'] = str(input("Escriba el nombre: "))
     nueva_inscripcion['Apellido1'] = input("Escriba el apellido 1: ")

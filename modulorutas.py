@@ -11,15 +11,12 @@ def Rutas():
 
     for i in range(cantidad):
         Nombre = input("Digite el nombre de la nueva ruta: ")
-        trainer = ("No definido")
-        ruta = ("No definido")
+        
         salones = ("No definido ")
 
         nueva_ruta = {
-            "Nombre": Nombre,
-            "Trainer_principal": trainer,
-            "Ruta": ruta,
-            "Salones": salones
+            "Ruta": Nombre,
+            "Salon" : salones
         }
 
         mijson["Rutas"]["Rutas_nuevas"].append(nueva_ruta)

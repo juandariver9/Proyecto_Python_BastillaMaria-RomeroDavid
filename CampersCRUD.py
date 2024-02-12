@@ -37,7 +37,8 @@ def MainCamperAprobados():
     listainscritos = mijson['datos']['inscripciones']
     estadoA = "Aprobado"
     estadoR = "Reprobado"
-    
+    riesgoB = "Sin riesgo"
+    riesgoM = "Riesgo alto"
     y = int(input("Escriba el ID del estudiante a actualizar: "))
     
     for i, inscripcion in enumerate(listainscritos):
@@ -56,7 +57,11 @@ def MainCamperAprobados():
                 "Telefono": inscripcion['Telefono'],
                 "Estado": estadoA if notafinal >= 60 else estadoR,
                 "Fecha de inicio": input("Escriba la fecha de inicio del estudiante: "),
-                "Fecha de finalizacion": input("Escriba la fecha de finalización: ")
+                "Fecha de finalizacion": input("Escriba la fecha de finalización: "), #Hacer que el sistema lo digite solo
+                "Riesgo": riesgoB if notafinal >= 60 else riesgoM,
+                "Trainer": " ",
+                "Ruta" : " ",
+                "Salon": " "
             }
             
             mijson2['Datos']['Matriculados'].append(aprobado)
