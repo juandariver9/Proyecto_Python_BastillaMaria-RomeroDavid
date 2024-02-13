@@ -1,0 +1,18 @@
+{
+    "Datos" :{
+        "Aprobados":[
+            {
+                "Nombre": "Juan",
+                "Apellido1": "Rivero",
+                "Apellido2": "Romero",
+                "Direccion": "4",
+                "Nombre Acudiente": "",
+                "Celular": 5,
+                "Telefono": 6,
+                "Estado": "Aprobado",
+                "Fecha de inicio": "12-03-2008",
+                "Fecha de finalizacion": "12-03-2009"
+              }
+        ]
+    }
+}

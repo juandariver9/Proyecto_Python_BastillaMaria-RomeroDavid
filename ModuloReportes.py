@@ -30,7 +30,6 @@ def ListaAprobaronExamen():
         for llave, valor in camper.items():
             print (f"{llave}: {valor}")
         print("-------------------------\n")
-ListaAprobaronExamen()
 
 
 def listatrainerscampus():
@@ -46,7 +45,6 @@ def listatrainerscampus():
         for llave, valor in trainers.items():
             print (f"{llave}: {valor}")
         print("-------------------------\n")
-
 
 
 
