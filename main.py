@@ -56,6 +56,22 @@ while True:
                     print(CampersCRUD.MainCamperAprobados())
                 elif decision_camper == 3:
                     print("Rendimiento Camper")
+                    print ( "1. Actualizar notas finales  \t 2. Mirar lista de campers ")
+                    print(" ")
+                    print("3. Mirar redimiento de camper\t 4. Ir al modulo anterior")
+                    decision = int(input("--->"))
+                    if decision == 1:
+                     print("Vamos a actualizar notas finales de los modulos")
+                    elif decision == 2:
+                     print("Lista notas campers")
+                    elif decision == 3:
+                     print("Rendimiento de camper")
+                    elif decision == 4:
+                     print("ir al modulo anterior")
+                    else:
+                     print("Opción inválida")
+
+
                 elif decision_camper == 4:
                     print("Salir")
                 else:
