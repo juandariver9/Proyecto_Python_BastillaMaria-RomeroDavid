@@ -9,7 +9,7 @@ def Listainscritos ():
         for llave,valor in i.items():
              print (f"{llave}: {valor}")
         print("-------------------------\n")
-
+Listainscritos()
 
 
 
@@ -45,7 +45,6 @@ def listatrainerscampus():
         for llave, valor in trainers.items():
             print (f"{llave}: {valor}")
         print("-------------------------\n")
-
 
 
 

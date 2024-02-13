@@ -66,10 +66,30 @@ def MainTrainersEliminar():
 
 def MainAsignarTrainers():
     import json
+    
     with open('datos.json', 'r', encoding="utf8") as outfile:
         mijson = json.load(outfile)
-    TrainersP = mijson['Datos']['Trainer_Principales']
-    print("Estos son los puestos de Trainers principales que estan desocupados en este momento")
     
-    print("Cual de los trainers secundarios desea añadir a TRAINERS PRINCIPALES")
+    TrainersP = mijson['Datos']['Trainer_Principales']
+    print("Estos son los puestos de Trainers principales que están desocupados en este momento:\n")
+    
+    for i, trainer in enumerate(TrainersP, start=1):
+        if not trainer['Nombre']:
+            print(f"Puesto #{i} desocupado")
+        else:
+            print(f"Puesto #{i} ocupado")
+    
+    añadir = int(input("En cuál de los espacios deseas añadir al trainer (1, 2 o 3): "))
+    
+    if añadir in [1, 2, 3]:
+        if not TrainersP[añadir - 1]['Nombre']:
+            print("Añadiendo trainer...")
+            x = input("Presione Enter para continuar")
+            # Aquí puedes añadir el código para añadir un nuevo trainer
+        else:
+            print("Puesto ocupado")
+            x = input("Presione Enter para continuar")
+    else:
+        print("Opción inválida. Debes seleccionar 1, 2 o 3.")
+        x = input("Presione Enter para continuar")
     

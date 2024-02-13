@@ -34,6 +34,9 @@ def MainCamperAprobados():
     with open('datos.json', 'r', encoding="utf8") as file:
         mijson2 = json.load(file)
     
+    with open('CampAprob.json', 'r', encoding="utf8") as file:
+        mijson3 = json.load(file)
+
     listainscritos = mijson['datos']['inscripciones']
     estadoA = "Aprobado"
     estadoR = "Reprobado"
@@ -65,11 +68,14 @@ def MainCamperAprobados():
             }
             
             mijson2['Datos']['Matriculados'].append(aprobado)
+            if notafinal >= 60:
+                mijson3['Datos']['Aprobados'].append(aprobado)
+                
             listainscritos.pop(i)
-            
             with open('inscritos.json', 'w', encoding="utf8") as file:
                 json.dump(mijson, file, indent=2)
-            
             with open('datos.json', 'w', encoding="utf8") as file:
                 json.dump(mijson2, file, indent=2)
+            with open('CampAprob.json','w', encoding="utf8") as file:
+                json.dump(mijson3, file, indent=2)
             break  # Break the loop after processing one entry
