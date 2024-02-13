@@ -66,8 +66,25 @@ while True:
                      print("Lista notas campers")
                     elif decision == 3:
                      print("Rendimiento de camper")
+                     print (" Que modulo desea actulizar")
+                     print("")
+                     print ( "1.  fundamentos de la programacion  \t 2. Programación Web ")
+                     print(" ")
+                     print("3. Programación formal\t 4. Bases de datos")
+                     print ("")
+                     print("5. Backend")
+                     decision = int(input("--->"))
+                     print("")
+                     if decision == 1:
+                      print("Fundamentos de la programacion")
+                    elif decision == 2:
+                       print("Programacion web")
+                    elif decision == 3:
+                     print("Programacion formal")
                     elif decision == 4:
-                     print("ir al modulo anterior")
+                     print("Bases de datos")
+                    elif decision == 5:
+                     print("Backend")
                     else:
                      print("Opción inválida")
 
