@@ -9,7 +9,7 @@ def Listainscritos ():
         for llave,valor in i.items():
              print (f"{llave}: {valor}")
         print("-------------------------\n")
-Listainscritos()
+
 
 
 
@@ -30,6 +30,7 @@ def ListaAprobaronExamen():
         for llave, valor in camper.items():
             print (f"{llave}: {valor}")
         print("-------------------------\n")
+ListaAprobaronExamen()
 
 
 def listatrainerscampus():
