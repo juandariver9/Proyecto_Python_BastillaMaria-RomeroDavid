@@ -6,9 +6,9 @@ print("*                   Bienvenido                   *")
 print("**************************************************")
 
 def limpiar_terminal():
-    if os.name == 'nt':  # Windows
+    if os.name == 'nt':  
         os.system('cls')
-    else:  # Linux y macOS
+    else: 
         os.system('clear')
 
 while True:
@@ -117,11 +117,6 @@ while True:
                     print("")
                 else:
                     print("Opción inválida")
-
-
-
-
-                    
             elif decision == 4:
                 print("**************************************************")
                 print("*                MODULO RUTAS                    *")

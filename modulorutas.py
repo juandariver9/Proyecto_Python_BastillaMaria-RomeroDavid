@@ -1,5 +1,3 @@
-
-
 def Rutas():
     import json
     x = open("Rutas.json", 'r')
@@ -25,7 +23,3 @@ def Rutas():
         json.dump(mijson, json_file, indent=2)
 
 Rutas()
-
-
-
-
