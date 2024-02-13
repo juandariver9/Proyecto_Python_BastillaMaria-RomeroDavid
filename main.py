@@ -2,6 +2,7 @@ import os
 import CampersCRUD
 import TrainersCRUD
 import TrainersHorario
+import Modulonotas
 print("**************************************************")
 print("*                   Bienvenido                   *")
 print("**************************************************")
@@ -64,35 +65,47 @@ while True:
                     decision = int(input("--->"))
                     limpiar_terminal()
                     if decision == 1:
-                     print("Vamos a actualizar notas finales de los modulos")
-                     x = input("")
+                        print("Rendimiento de camper")
+                        print (" Que modulo desea actulizar")
+                        print("")
+                        print ( "1.  fundamentos de la programacion  \t 2. Programación Web ")
+                        print(" ")
+                        print("3. Programación formal\t 4. Bases de datos")
+                        print ("")
+                        print("5. Backend")
+                        decision2 = int(input("--->"))
+                        print("")
+                        if decision2 == 1:
+                            print("**************************************************")
+                            print("*        MODULO FUNDAMENTOS PROGRAMACION         *")
+                            print("**************************************************")
+                            print(Modulonotas.NotasFundamentosProgramacion())
+                        elif decision2 == 2:
+                            print("**************************************************")
+                            print("*          MODULO PROGRAMACION WEB               *")
+                            print("**************************************************")
+                            print(Modulonotas.NotasProgramacionWeb())
+                        elif decision2 == 3:
+                            print("**************************************************")
+                            print("*         MODULO PROGRAMACION FORMAL             *")
+                            print("**************************************************")
+                            print(Modulonotas.NotasProgramacionFormal())
+                        elif decision2 == 4:
+                            print("**************************************************")
+                            print("*             MODULO BASES DE DATOS              *")
+                            print("**************************************************")
+                            print(Modulonotas.NotasFinalesBasesDeDatos())
+                        elif decision2== 5:
+                            print("**************************************************")
+                            print("*             MODULO BACKEND             *")
+                            print("**************************************************")
+                            print(Modulonotas.NotasFinalesBackend())
+                        else:
+                            print("Opción inválida")
                     elif decision == 2:
-                     print("Lista notas campers")
+                        print("Lista notas campers")
                     elif decision == 3:
-                     print("Rendimiento de camper\n")
-                     print ("Que modulo desea actulizar")
-                     print("")
-                     print ( "1. Fundamentos de la programacion\t2. Programación Web ")
-                     print(" ")
-                     print("3. Programación formal\t\t\t4. Bases de datos")
-                     print ("")
-                     print("5. Backend")
-                     decision = int(input("--->"))
-                     print("")
-                     if decision == 1:
-                      print("Fundamentos de la programacion")
-                    elif decision == 2:
-                       print("Programacion web")
-                    elif decision == 3:
-                     print("Programacion formal")
-                    elif decision == 4:
-                     print("Bases de datos")
-                    elif decision == 5:
-                     print("Backend")
-                    else:
-                     print("Opción inválida")
-
-
+                        print(" Mirar rendimiento de camper")
                 elif decision_camper == 4:
                     print("Salir")
                 else:

@@ -1,6 +1,6 @@
 {
   "Datos": {
-    "Matriculados": [
+    "Aprobados": [
       {
         "Nombre": "Juan",
         "Apellido1": "Rivero",
@@ -64,50 +64,6 @@
         "Trainer": " ",
         "Ruta": " ",
         "Salon": " "
-      }
-    ],
-    "Trainers_Secundarios": [
-      {
-        "id": 4,
-        "Identificacion": 24,
-        "Nombre": "Sonia",
-        "Apellido1": "Romero",
-        "Celular": 4,
-        "Telefono": 5,
-        "Horario": {
-          "Clase1": "Sin asignar",
-          "Clase2": "Sin asignar",
-          "Clase3": "Sin asignar",
-          "Clase4": "Sin asignar"
-        }
-      },
-      {
-        "id": 5,
-        "Identificacion": 78,
-        "Nombre": "Fabio",
-        "Apellido1": "Rivero",
-        "Celular": 5,
-        "Telefono": 6,
-        "Horario": {
-          "Clase1": "Sin asignar",
-          "Clase2": "Sin asignar",
-          "Clase3": "Sin asignar",
-          "Clase4": "Sin asignar"
-        }
-      },
-      {
-        "id": 6,
-        "Identificacion": 45,
-        "Nombre": "Juan",
-        "Apellido1": "Rivero",
-        "Celular": 7,
-        "Telefono": 8,
-        "Horario": {
-          "Clase1": "Sin asignar",
-          "Clase2": "Sin asignar",
-          "Clase3": "Sin asignar",
-          "Clase4": "Sin asignar"
-        }
       }
     ]
   }
