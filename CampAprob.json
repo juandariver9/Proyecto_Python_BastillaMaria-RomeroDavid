@@ -112,6 +112,38 @@
         "Trainer": " ",
         "Ruta": " ",
         "Salon": " "
+      },
+      {
+        "Nombre": "Ruben",
+        "Apellido1": "Ortiz",
+        "Apellido2": "Ortega",
+        "Direccion": "45",
+        "Nombre Acudiente": "",
+        "Celular": 56,
+        "Telefono": 2,
+        "Estado": "Aprobado",
+        "Fecha de inicio": "12",
+        "Fecha de finalizacion": "45",
+        "Riesgo": "Sin riesgo",
+        "Trainer": " ",
+        "Ruta": " ",
+        "Salon": " "
+      },
+      {
+        "Nombre": "Paula",
+        "Apellido1": "Mu\u00f1oz",
+        "Apellido2": "Mu\u00f1oz",
+        "Direccion": "8",
+        "Nombre Acudiente": "",
+        "Celular": 9,
+        "Telefono": 5,
+        "Estado": "Aprobado",
+        "Fecha de inicio": "12",
+        "Fecha de finalizacion": "45",
+        "Riesgo": "Sin riesgo",
+        "Trainer": "Karen",
+        "Ruta": "NodeCore",
+        "Salon": "2"
       }
     ]
   }

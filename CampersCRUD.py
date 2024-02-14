@@ -58,23 +58,7 @@ def MainCamperAprobados():
             notapractica = int(input("Digite la nota de la prueba práctica: "))
             notateorica = int(input("Digite la nota de la prueba teórica: "))
             notafinal = (notapractica + notateorica) / 2
-            
-            aprobado = {
-                "Nombre": inscripcion['Nombre'],
-                "Apellido1": inscripcion['Apellido1'],
-                "Apellido2": inscripcion['Apellido2'],
-                "Direccion": inscripcion['Direccion'],
-                "Nombre Acudiente": inscripcion['Acudiente'],
-                "Celular": inscripcion['Celular'],
-                "Telefono": inscripcion['Telefono'],
-                "Estado": estadoA if notafinal >= 60 else estadoR,
-                "Fecha de inicio": input("Escriba la fecha de inicio del estudiante: "),
-                "Fecha de finalizacion": input("Escriba la fecha de finalización: "), #Hacer que el sistema lo digite solo
-                "Riesgo": riesgoB if notafinal >= 60 else riesgoM,
-                "Trainer": " ",
-                "Ruta" : " ",
-                "Salon": " "
-            }
+
             aprobado1 = {
                 "Nombre": inscripcion['Nombre'],
                 "Apellido1": inscripcion['Apellido1'],
@@ -102,6 +86,23 @@ def MainCamperAprobados():
                 print("No hay salones disponibles con menos de 33 alumnos.")
                 # Aquí puedes agregar la lógica para manejar el caso en el que no haya salones disponibles.
             
+            aprobado = {
+                "Nombre": inscripcion['Nombre'],
+                "Apellido1": inscripcion['Apellido1'],
+                "Apellido2": inscripcion['Apellido2'],
+                "Direccion": inscripcion['Direccion'],
+                "Nombre Acudiente": inscripcion['Acudiente'],
+                "Celular": inscripcion['Celular'],
+                "Telefono": inscripcion['Telefono'],
+                "Estado": estadoA if notafinal >= 60 else estadoR,
+                "Fecha de inicio": input("Escriba la fecha de inicio del estudiante: "),
+                "Fecha de finalizacion": input("Escriba la fecha de finalización: "),
+                "Riesgo": riesgoB if notafinal >= 60 else riesgoM,
+                "Trainer": salon_info["Profesor"],
+                "Ruta" : salon_info["Ruta"],
+                "Salon": salon_numero
+            }
+            # Resto del código
             mijson2['Datos']['Matriculados'].append(aprobado)
             if notafinal >= 60:
                 mijson3['Datos']['Aprobados'].append(aprobado)
