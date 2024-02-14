@@ -27,6 +27,8 @@ def MainCamperAñadir():
     
     mainCamper()
 
+import json
+
 def MainCamperAprobados():
     with open('inscritos.json', 'r', encoding="utf8") as file:
         mijson = json.load(file)
@@ -36,9 +38,14 @@ def MainCamperAprobados():
     
     with open('CampAprob.json', 'r', encoding="utf8") as file:
         mijson3 = json.load(file)
+    
     with open('Notas.json','r',encoding="utf8") as file:
         mijson4 = json.load(file)
+    
+    with open('Salones.json','r',encoding="utf8") as file:
+        mijson5 = json.load(file)
 
+    Salones = mijson5['Salones']
     listainscritos = mijson['datos']['inscripciones']
     estadoA = "Aprobado"
     estadoR = "Reprobado"
@@ -84,6 +91,17 @@ def MainCamperAprobados():
                 "Rendimiento_Backend": ""
             }
             
+            # Buscar un salón con menos de 33 alumnos y agregar al alumno
+            for salon_numero, salon_info in Salones.items():
+                if len(salon_info["Alumnos"]) < 33:
+                    aprobado1["Salon"] = salon_numero
+                    salon_info["Alumnos"].append(aprobado1)
+                    print(f"El estudiante {inscripcion['Nombre']} se agregó al salón {salon_numero}.")
+                    break
+            else:
+                print("No hay salones disponibles con menos de 33 alumnos.")
+                # Aquí puedes agregar la lógica para manejar el caso en el que no haya salones disponibles.
+            
             mijson2['Datos']['Matriculados'].append(aprobado)
             if notafinal >= 60:
                 mijson3['Datos']['Aprobados'].append(aprobado)
@@ -98,4 +116,9 @@ def MainCamperAprobados():
                 json.dump(mijson3, file, indent=2)
             with open('Notas.json', 'w', encoding="utf8") as file:
                 json.dump(mijson4, file, indent=2)
+            
+            # Actualizar Salones.json con el nuevo alumno
+            with open('Salones.json', 'w', encoding="utf8") as file:
+                json.dump(mijson5, file, indent=2)
+            
             break  # Break the loop after processing one entry
