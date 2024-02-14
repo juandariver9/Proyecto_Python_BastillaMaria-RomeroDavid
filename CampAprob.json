@@ -64,6 +64,22 @@
         "Trainer": " ",
         "Ruta": " ",
         "Salon": " "
+      },
+      {
+        "Nombre": "Helen",
+        "Apellido1": "Vargas",
+        "Apellido2": "Parga",
+        "Direccion": "2",
+        "Nombre Acudiente": "",
+        "Celular": 4,
+        "Telefono": 5,
+        "Estado": "Aprobado",
+        "Fecha de inicio": "12",
+        "Fecha de finalizacion": "24",
+        "Riesgo": "Sin riesgo",
+        "Trainer": " ",
+        "Ruta": " ",
+        "Salon": " "
       }
     ]
   }

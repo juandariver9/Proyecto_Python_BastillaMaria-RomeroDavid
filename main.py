@@ -131,6 +131,7 @@ while True:
                     print(TrainersCRUD.MainTrainersEliminar())
                 elif decision == 3:
                     print("Asignar Trainer")
+                    print(TrainersCRUD.MainAsignarTrainers())
                 elif decision == 4:
                     print("Ir al modulo anterior")
                 else:

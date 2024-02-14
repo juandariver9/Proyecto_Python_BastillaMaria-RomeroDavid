@@ -1,6 +1,37 @@
 {
-    "Horarios" : {
+    "Horarios": {
+        "Clase1": [
+            {
+                "Sputnik": "",
+                "Artemis": "",
+                "Apolo" : ""
+            }
 
+        ],
+        "Clase2" : [
+            {
+                "Artemis": "",
+                "Apolo" : "",
+                "Sputnik": ""
+            }
 
+        ],
+        "Clase3" : [
+            {
+                "Apolo" : "",
+                "Sputnik": "",
+                "Artemis": ""
+            }
+
+        ],
+        "Clase4" : [
+            {
+                "Sputnik": "",
+                "Artemis": "",
+                "Apolo" : ""
+            }
+
+        ]
+        
     }
 }
