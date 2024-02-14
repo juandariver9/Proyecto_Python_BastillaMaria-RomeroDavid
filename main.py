@@ -106,8 +106,10 @@ while True:
                             print("Opción inválida")
                     elif decision == 2:
                         print("Lista notas campers")
+                        print(Modulonotas.Mostrarlistarendimiento)
                     elif decision == 3:
                         print(" Mirar rendimiento de camper")
+                        print(Modulonotas.Mostrar_rendimiento)
                 elif decision_camper == 4:
                     print("Salir")
                 else:
@@ -165,6 +167,7 @@ while True:
                     print(ModuloReportes.listatrainerscampus())
                 elif decision == 4:
                     print("Campers con bajo rendimiento")
+                    print(ModuloReportes.bajo_rendimiento)
                 elif decision == 5:
                     print("Campers y Trainers asociados a una ruta de entrenamiento")
                 elif decision == 6:
@@ -182,8 +185,16 @@ while True:
                         decision5=int(input("--->"))
                         if decision5 == 1 :
                          print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         elif decision5==2:
-                            print("")
+                         print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         
                     elif decision == 2:
                         print(" 1. lista de estudiantes aprobados ")
@@ -191,8 +202,16 @@ while True:
                         decision5=int(input("--->"))
                         if decision5 == 1 :
                          print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         elif decision5==2:
-                            print("")
+                         print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         
                     elif decision == 3:
                         print(" 1. lista de estudiantes aprobados ")
@@ -200,8 +219,16 @@ while True:
                         decision5=int(input("--->"))
                         if decision5 == 1 :
                          print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         elif decision5==2:
-                            print("")
+                         print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         
                     elif decision == 4:
                         print(" 1. lista de estudiantes aprobados ")
@@ -209,8 +236,16 @@ while True:
                         decision5=int(input("--->"))
                         if decision5 == 1 :
                          print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         elif decision5==2:
-                            print("")
+                         print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         
                     elif decision == 5:
                         print(" 1. lista de estudiantes aprobados ")
@@ -218,8 +253,16 @@ while True:
                         decision5=int(input("--->"))
                         if decision5 == 1 :
                          print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         elif decision5==2:
-                            print("")
+                         print("")
+                         print ( " 1. ruta java")
+                         print ( " 1. ruta .netcore")
+                         print ( " 1. ruta .nodecore")
+                         decision5=int(input("--->"))
                         
 
                   

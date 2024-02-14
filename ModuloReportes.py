@@ -49,3 +49,46 @@ def listatrainerscampus():
 
 
 
+def bajo_rendimiento():
+    import json
+    with open('Notas.json', 'r', encoding="utf8") as file:
+        mijson = json.load(file)
+
+    T = mijson['Notas']['Matriculados']
+    
+    aprobado = None  # Initialize aprobado outside the loop
+
+    for index, value in enumerate(T):
+        if 'Rendimiento_Fundamentos' in value and value['Rendimiento_Fundamentos'] == "Bajo rendimiento" or 'Rendimiento_programacion_web' in value and value['Rendimiento_programacion_web'] == "Bajo rendimiento" or 'Rendimiento_programacion_formal' in value and value['Rendimiento_programacion_formal'] == "Bajo rendimiento"or 'Rendimiento_Base_datos' in value and value['Rendimiento_Base_datos'] == "Bajo rendimiento" or 'Rendimiento_Backend' in value and value['Rendimiento_Backend'] == "Bajo rendimiento":
+            aprobado = {
+                "Nombre": value['Nombre'],
+                "Apellido1": value['Apellido1'],
+                "Telefono": value['Telefono'],
+                "Nota_final_Fundamentos": value['Nota_final_Fundamentos'],
+                "Rendimiento_Fundamentos": value['Rendimiento_Fundamentos'],
+                "Nota_final_Programacion_web": value['Nota_final_Programacion_web'],
+                "Rendimiento_programacion_web": value['Rendimiento_programacion_web'],
+                "Nota_final_Programacion_formal": value['Nota_final_Programacion_formal'],
+                "Rendimiento_programacion_formal": value['Rendimiento_programacion_formal'],
+                "Nota_final_Bases_datos": value['Nota_final_Bases_datos'],
+                "Rendimiento_Base_datos": value['Rendimiento_Base_datos'],
+                "Nota_final_Backend": value['Nota_final_Backend'],
+                "Rendimiento_Backend": value['Rendimiento_Backend'],
+            }
+           
+
+    if aprobado:
+        print("Presione enter para mostrar lost de campers con bajo rendimiento")
+        enter = input("")
+        
+        # Print the information in a structured way
+        for key, val in aprobado.items():
+            print(f"{key}: {val}")
+        print("-----------------------------------")
+
+    with open('Notas.json', 'w', encoding="utf8") as file:
+        json.dump(mijson, file, indent=4)
+
+
+
+

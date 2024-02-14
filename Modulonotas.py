@@ -37,7 +37,7 @@ def NotasFundamentosProgramacion():
             nota_final = nota_prueba_practica + nota_prueba_teorica + total_talleres
 
             rbajo = "Riesgo Bajo"
-            ralto = "Riesgo Alto"
+            ralto = "Bajo rendimiento"
             
             rendimiento = {
                 "Nota_final_Fundamentos": nota_final,
@@ -92,7 +92,7 @@ def NotasProgramacionWeb():
             nota_final = nota_prueba_practica + nota_prueba_teorica + total_talleres
 
             rbajo = "Riesgo Bajo"
-            ralto = "Riesgo Alto"
+            ralto = "Bajo rendimiento"
             
             rendimiento = {
                 "Nota_final_Programacion_web": nota_final,
@@ -146,7 +146,7 @@ def NotasProgramacionFormal():
             nota_final = nota_prueba_practica + nota_prueba_teorica + total_talleres
 
             rbajo = "Riesgo Bajo"
-            ralto = "Riesgo Alto"
+            ralto = "Bajo rendimiento"
             
             rendimiento = {
                 "Nota_final_Programacion_formal": nota_final,
@@ -200,7 +200,7 @@ def NotasFinalesBasesDeDatos():
             nota_final = nota_prueba_practica + nota_prueba_teorica + total_talleres
 
             rbajo = "Riesgo Bajo"
-            ralto = "Riesgo Alto"
+            ralto = "Bajo rendimiento "
             
             rendimiento = {
                 "Nota_final_Bases_datos": nota_final,
@@ -253,7 +253,7 @@ def NotasFinalesBackend():
             nota_final = nota_prueba_practica + nota_prueba_teorica + total_talleres
 
             rbajo = "Riesgo Bajo"
-            ralto = "Riesgo Alto"
+            ralto = "Bajo rendimiento"
             
             rendimiento = {
                 "Nota_final_Backend": nota_final,
@@ -266,6 +266,67 @@ def NotasFinalesBackend():
 
     with open('Notas.json', 'w', encoding="utf8") as file:
         json.dump(mijson, file, indent=4) 
+
+
+def Mostrarlistarendimiento():
+    import json
+    with open('Notas.json', 'r') as file:
+        mijson = json.load(file)
+        listacampers = mijson["Notas"]["Matriculados"]
+
+        print("Por Favor presione alguna tecla para mostrar lista de rendimiento de campers")
+        for i in listacampers:
+            for llave, valor in i.items():
+                print(f"{llave}: {valor}")
+            print("-----------------------------")
+        print("Por Favor presione alguna tecla para mostrar lista de rendimiento de campers")
+        enter = input("")
+
+    with open('Notas.json', 'w') as file:
+        json.dump(mijson, file, indent=4)
+
+import json
+
+def Mostrar_rendimiento():
+    with open('Notas.json', 'r', encoding="utf8") as file:
+        mijson = json.load(file)
+
+    T = mijson['Notas']['Matriculados']
+    tel = int(input("Digite el Telefono de camper para visualizar: "))
+    
+    aprobado = None  # Initialize aprobado outside the loop
+
+    for index, value in enumerate(T):
+        if 'Telefono' in value and value['Telefono'] == tel:
+            aprobado = {
+                "Nombre": value['Nombre'],
+                "Apellido1": value['Apellido1'],
+                "Telefono": value['Telefono'],
+                "Nota_final_Fundamentos": value['Nota_final_Fundamentos'],
+                "Rendimiento_Fundamentos": value['Rendimiento_Fundamentos'],
+                "Nota_final_Programacion_web": value['Nota_final_Programacion_web'],
+                "Rendimiento_programacion_web": value['Rendimiento_programacion_web'],
+                "Nota_final_Programacion_formal": value['Nota_final_Programacion_formal'],
+                "Rendimiento_programacion_formal": value['Rendimiento_programacion_formal'],
+                "Nota_final_Bases_datos": value['Nota_final_Bases_datos'],
+                "Rendimiento_Base_datos": value['Rendimiento_Base_datos'],
+                "Nota_final_Backend": value['Nota_final_Backend'],
+                "Rendimiento_Backend": value['Rendimiento_Backend'],
+            }
+
+    if aprobado:
+        print("Presione enter para mostrar el rendimiento del camper")
+        
+        # Print the information in a structured way
+        for key, val in aprobado.items():
+            print(f"{key}: {val}")
+
+    with open('Notas.json', 'w', encoding="utf8") as file:
+            json.dump(mijson, file, indent=4)
+    enter = input("")
+
+
+
 
 
 
