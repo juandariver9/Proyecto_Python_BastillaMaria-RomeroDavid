@@ -178,18 +178,24 @@ while True:
                     print(ModuloReportes.bajo_rendimiento())
                     x=input("")
                 elif decision == 5:
-                    print("Campers y Trainers asociados a una ruta de entrenamiento")
+                    limpiar_terminal()
                     print("Que ruta de entrenamiento desea elegir ")
                     print("1. Ruta Java")
                     print("2. Ruta Netcore ")
                     print("3. Ruta Nodecore ")
-                    decision6=input("--->")
-                    if decision6==1 :
+                    decision6=int(input("--->"))
+                    if decision6==1:
                         print("Ruta Java")
+                        print(ModuloReportes.c_y_p_asociados_Java())
+                        x = input("")
                     elif  decision6==2 :
                         print("Ruta Netcore")
+                        print(ModuloReportes.c_y_p_asociados_Net())
+                        x = input("")
                     elif decision6==3 :
                         print("Ruta Nodecore")
+                        print(ModuloReportes.c_y_p_asociados_Node())
+                        x = input("")
                 elif decision == 6:
                     print("Campers aprobados y desaprobados")
                     print (" Por favor elija que modulo desea revisar")

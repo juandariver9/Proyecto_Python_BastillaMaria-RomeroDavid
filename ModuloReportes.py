@@ -17,9 +17,6 @@ def Listainscritos ():
 
 
 
-
-
-
 def ListaAprobaronExamen():
     import json
     
@@ -40,12 +37,6 @@ def ListaAprobaronExamen():
 
 
 
-
-
-
-
-
-
 def listatrainerscampus():
     import json
     x=open("datos.json", 'r')
@@ -62,9 +53,6 @@ def listatrainerscampus():
     with open('datos.json', 'w', encoding="utf8") as x:
             json.dump(data, x , indent=4)
     
-
-
-
 
 def bajo_rendimiento():
     import json
@@ -110,3 +98,58 @@ def bajo_rendimiento():
 
 
 
+def c_y_p_asociados_Java():
+    import json
+    with open('Salones.json', 'r', encoding="utf8") as file:
+        mijson = json.load(file)
+
+    Salones = mijson['Salones']
+
+    for _, salon_info in Salones.items(): 
+        if salon_info["Ruta"] == "Java":
+            print(f"Campers y Trainer asociados a la ruta 'Java':")
+            print(f"Profesor: {salon_info['Profesor']}")
+            for alumno in salon_info['Alumnos']:
+                print(f"Camper: {alumno['Nombre']} {alumno['Apellido1']}")
+                print("--------------------------")
+
+    with open('Salones.json', 'w', encoding="utf8") as x:
+        json.dump(mijson, x, indent=2)
+        
+        
+def c_y_p_asociados_Net():
+    import json
+    with open('Salones.json', 'r', encoding="utf8") as file:
+        mijson = json.load(file)
+
+    Salones = mijson['Salones']
+
+    for _, salon_info in Salones.items(): 
+        if salon_info["Ruta"] == "NetCore":
+            print(f"Campers y Trainer asociados a la ruta '.Net':")
+            print(f"Profesor: {salon_info['Profesor']}")
+            for alumno in salon_info['Alumnos']:
+                print(f"Camper: {alumno['Nombre']} {alumno['Apellido1']}")
+                print("--------------------------")
+
+    with open('Salones.json', 'w', encoding="utf8") as x:
+        json.dump(mijson, x, indent=2)
+        
+def c_y_p_asociados_Node():
+    import json
+    with open('Salones.json', 'r', encoding="utf8") as file:
+        mijson = json.load(file)
+
+    Salones = mijson['Salones']
+
+    for _, salon_info in Salones.items(): 
+        if salon_info["Ruta"] == "NodeCore":
+            print(f"Campers y Trainer asociados a la ruta 'Node':")
+            print(f"Profesor: {salon_info['Profesor']}")
+            for alumno in salon_info['Alumnos']:
+                print(f"Camper: {alumno['Nombre']} {alumno['Apellido1']}")
+                print("--------------------------")
+
+    with open('Salones.json', 'w', encoding="utf8") as x:
+        json.dump(mijson, x, indent=2)
+        

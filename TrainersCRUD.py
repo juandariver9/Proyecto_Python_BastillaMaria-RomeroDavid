@@ -1,3 +1,79 @@
+def MainTrainersAñadir():
+    import json
+    try:
+        with open('datos.json', 'r', encoding="utf8") as file:
+            mijson = json.load(file)
+    except FileNotFoundError:
+        mijson = {"Datos": {"Trainers_Secundarios": []}}
+    
+    if 'Trainers_Secundarios' not in mijson['Datos']:
+        mijson['Datos']['Trainers_Secundarios'] = []
+        
+    nuevo_id = max([inscripcion["id"] for inscripcion in mijson['Datos']['Trainers_Secundarios']], default=0) + 1
+    nueva_inscripcion = {}
+    nueva_inscripcion['id'] = nuevo_id if nuevo_id == 1 else nuevo_id
+    nueva_inscripcion['Identificacion'] = int(input("Escriba el número de identificación: "))
+    nueva_inscripcion['Nombre'] = str(input("Escriba el nombre: "))
+    nueva_inscripcion['Apellido1'] = input("Escriba el apellido 1: ")
+    nueva_inscripcion['Celular'] = int(input("Escriba el número de celular: "))
+    nueva_inscripcion['Telefono'] = int(input("Escriba el número de teléfono: "))
+    nueva_inscripcion['Horario'] = {
+          "Clase1" : "Sin asignar",
+          "Clase2" : "Sin asignar",
+          "Clase3" : "Sin asignar",
+          "Clase4" : "Sin asignar"
+          }
+    
+    mijson['Datos']['Trainers_Secundarios'].append(nueva_inscripcion)
+    
+    with open('datos.json', 'w', encoding="utf8") as file:
+        json.dump(mijson, file, indent=2)
+
+
+def MainTrainersEliminar():
+    import json
+
+    tipo_entrenador = input("¿Desea eliminar un entrenador principal o secundario? (P/S): ").upper()
+    
+    if tipo_entrenador not in ['P', 'S']:
+        print("Opción no válida. Debe ingresar 'P' para principal o 'S' para secundario.")
+        return
+    
+    identificacion_a_eliminar = int(input("Ingrese el número de identificación del entrenador a eliminar: "))
+    
+    with open('datos.json', 'r', encoding="utf8") as file:
+        mijson = json.load(file)
+        
+    eliminado = False
+    
+    if tipo_entrenador == 'P':
+        entrenadores = mijson['Datos']['Trainer_Principales']
+        for entrenador in entrenadores:
+            if entrenador['id'] == identificacion_a_eliminar:
+                entrenador['Identificacion'] = ''
+                entrenador['Nombre'] = ''
+                entrenador['Apellido1'] = ''
+                entrenador['Celular'] = ''
+                entrenador['Telefono'] = ''
+                print("Entrenador principal eliminado exitosamente.")
+                eliminado = True
+                break
+    else:
+        entrenadores = mijson['Datos']['Trainers_Secundarios']
+        
+        for i, entrenador in enumerate(entrenadores):
+            if entrenador['Identificacion'] == identificacion_a_eliminar:
+                del mijson['Datos']['Trainers_Secundarios'][i]
+                print("Entrenador secundario eliminado exitosamente.")
+                eliminado = True
+                break
+        
+    if not eliminado:
+        print("No se encontró ningún entrenador con la identificación proporcionada.")
+        
+    with open('datos.json', 'w', encoding="utf8") as file:
+        json.dump(mijson, file, indent=2)
+
 def MainAsignarTrainers():
     import json
     def reindexar_IDs_entrenadores_secundarios(TrainersS):
