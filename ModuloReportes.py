@@ -9,7 +9,7 @@ def Listainscritos ():
         for llave,valor in i.items():
              print (f"{llave}: {valor}")
         print("-------------------------\n")
-Listainscritos()
+
 
 
 

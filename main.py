@@ -3,6 +3,8 @@ import CampersCRUD
 import TrainersCRUD
 import TrainersHorario
 import Modulonotas
+import ModuloReportes
+import modulorutas
 print("**************************************************")
 print("*                   Bienvenido                   *")
 print("**************************************************")
@@ -154,16 +156,74 @@ while True:
 
                 if decision == 1:
                     print("Campers en estado de INSCRITO")
+                    print(ModuloReportes.Listainscritos())
                 elif decision == 2:
                     print("Campers que aprobaron el examen inicial")
+                    print(ModuloReportes.ListaAprobaronExamen())
                 elif decision == 3:
                     print("Trainers Activos")
+                    print(ModuloReportes.listatrainerscampus())
                 elif decision == 4:
                     print("Campers con bajo rendimiento")
                 elif decision == 5:
                     print("Campers y Trainers asociados a una ruta de entrenamiento")
                 elif decision == 6:
                     print("Campers aprobados y desaprobados")
+                    print (" Por favor elija que modulo desea revisar")
+                    print("1. Fundamentos de programacion ")
+                    print("2. Programacion web ")
+                    print("3. Programacion formal")
+                    print("4. Bases de datos ")
+                    print("5. backend")
+                    decision4=int(input("--->"))
+                    if decision == 1:
+                        print(" 1. lista de estudiantes aprobados ")
+                        print(" 2. lista de estudiantes desaprobados ")
+                        decision5=int(input("--->"))
+                        if decision5 == 1 :
+                         print("")
+                        elif decision5==2:
+                            print("")
+                        
+                    elif decision == 2:
+                        print(" 1. lista de estudiantes aprobados ")
+                        print(" 2. lista de estudiantes desaprobados ")
+                        decision5=int(input("--->"))
+                        if decision5 == 1 :
+                         print("")
+                        elif decision5==2:
+                            print("")
+                        
+                    elif decision == 3:
+                        print(" 1. lista de estudiantes aprobados ")
+                        print(" 2. lista de estudiantes desaprobados ")
+                        decision5=int(input("--->"))
+                        if decision5 == 1 :
+                         print("")
+                        elif decision5==2:
+                            print("")
+                        
+                    elif decision == 4:
+                        print(" 1. lista de estudiantes aprobados ")
+                        print(" 2. lista de estudiantes desaprobados ")
+                        decision5=int(input("--->"))
+                        if decision5 == 1 :
+                         print("")
+                        elif decision5==2:
+                            print("")
+                        
+                    elif decision == 5:
+                        print(" 1. lista de estudiantes aprobados ")
+                        print(" 2. lista de estudiantes desaprobados ")
+                        decision5=int(input("--->"))
+                        if decision5 == 1 :
+                         print("")
+                        elif decision5==2:
+                            print("")
+                        
+
+                  
+
                 elif decision == 7:
                     print("")
                 else:
@@ -176,6 +236,9 @@ while True:
                 print("1. Añadir Rutas  \t 2. Ir al modulo anterior")
                 print(" ")
                 decision_ruta=int(input("------>"))
+                if decision_ruta==1 :
+                    print(modulorutas.Rutas())
+
             elif decision==5:
                 break
             else:

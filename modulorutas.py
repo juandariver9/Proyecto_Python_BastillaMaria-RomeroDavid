@@ -21,5 +21,3 @@ def Rutas():
 
     with open("Rutas.json", 'w') as json_file:
         json.dump(mijson, json_file, indent=2)
-
-Rutas()
