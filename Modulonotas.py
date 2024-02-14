@@ -274,20 +274,18 @@ def Mostrarlistarendimiento():
         mijson = json.load(file)
         listacampers = mijson["Notas"]["Matriculados"]
 
-        print("Por Favor presione alguna tecla para mostrar lista de rendimiento de campers")
+        print("Por favor, presione alguna tecla para mostrar la lista de rendimiento de campers:")
+        enter=input("")
         for i in listacampers:
             for llave, valor in i.items():
                 print(f"{llave}: {valor}")
             print("-----------------------------")
-        print("Por Favor presione alguna tecla para mostrar lista de rendimiento de campers")
-        enter = input("")
 
-    with open('Notas.json', 'w') as file:
-        json.dump(mijson, file, indent=4)
 
-import json
 
 def Mostrar_rendimiento():
+    import json
+
     with open('Notas.json', 'r', encoding="utf8") as file:
         mijson = json.load(file)
 
@@ -313,17 +311,22 @@ def Mostrar_rendimiento():
                 "Nota_final_Backend": value['Nota_final_Backend'],
                 "Rendimiento_Backend": value['Rendimiento_Backend'],
             }
+            break  # No need to continue searching once the camper is found
 
     if aprobado:
         print("Presione enter para mostrar el rendimiento del camper")
+        input()  # Use input() directly without storing it in a variable
         
         # Print the information in a structured way
         for key, val in aprobado.items():
             print(f"{key}: {val}")
+    else:
+        print(f"No se encontró ningún camper con el número de teléfono {tel}.")
 
-    with open('Notas.json', 'w', encoding="utf8") as file:
-            json.dump(mijson, file, indent=4)
-    enter = input("")
+    # Remove the unnecessary file write operation
+    # with open('Notas.json', 'w', encoding="utf8") as file:
+    #     json.dump(mijson, file, indent=4)
+
 
 
 

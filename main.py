@@ -106,10 +106,14 @@ while True:
                             print("Opción inválida")
                     elif decision == 2:
                         print("Lista notas campers")
-                        print(Modulonotas.Mostrarlistarendimiento)
+                        print(Modulonotas.Mostrarlistarendimiento())
+                        x=input("")
+
+
                     elif decision == 3:
                         print(" Mirar rendimiento de camper")
-                        print(Modulonotas.Mostrar_rendimiento)
+                        print(Modulonotas.Mostrar_rendimiento())
+                        x=input("")
                 elif decision_camper == 4:
                     print("Salir")
                 else:
@@ -159,17 +163,33 @@ while True:
                 if decision == 1:
                     print("Campers en estado de INSCRITO")
                     print(ModuloReportes.Listainscritos())
+                    x=input("")
+                    
                 elif decision == 2:
                     print("Campers que aprobaron el examen inicial")
                     print(ModuloReportes.ListaAprobaronExamen())
+                    x=input("")
                 elif decision == 3:
                     print("Trainers Activos")
                     print(ModuloReportes.listatrainerscampus())
+                    x=input("")
                 elif decision == 4:
                     print("Campers con bajo rendimiento")
-                    print(ModuloReportes.bajo_rendimiento)
+                    print(ModuloReportes.bajo_rendimiento())
+                    x=input("")
                 elif decision == 5:
                     print("Campers y Trainers asociados a una ruta de entrenamiento")
+                    print("Que ruta de entrenamiento desea elegir ")
+                    print("1. Ruta Java")
+                    print("2. Ruta Netcore ")
+                    print("3. Ruta Nodecore ")
+                    decision6=input("--->")
+                    if decision6==1 :
+                        print("Ruta Java")
+                    elif  decision6==2 :
+                        print("Ruta Netcore")
+                    elif decision6==3 :
+                        print("Ruta Nodecore")
                 elif decision == 6:
                     print("Campers aprobados y desaprobados")
                     print (" Por favor elija que modulo desea revisar")

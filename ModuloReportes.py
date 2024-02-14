@@ -2,13 +2,18 @@ def Listainscritos ():
     import json
     x=open("inscritos.json" , 'r')
     mijson= json.load (x)
-    print (" Por favor de enter para mostrar Campers en estado inscrito")
-    enter=input("")
     listains=mijson[ "datos"]["inscripciones"]
+    print(" Por favor de enter para mostrar Campers en estado inscrito")
+    enter=input("")
+    print(listains)
     for i in listains:
+        print("holiiiii1")
         for llave,valor in i.items():
-             print (f"{llave}: {valor}")
+            print("holiiiii2")
+            print (f"{llave}: {valor}")
         print("-------------------------\n")
+    with open('Inscritos.json', 'w', encoding="utf8") as x:
+        json.dump(mijson, x, indent=4)
 
 
 
@@ -22,14 +27,23 @@ def ListaAprobaronExamen():
         data = json.load(x)
     
     listaaprobaron = [camper for camper in data["Datos"]["Matriculados"] if camper["Estado"] == "Aprobado"]
+    print(" Por favor de enter para mostrar Campers en estado inscrito")
+    enter=input("")
 
-    print("Por favor, presiona Enter si deseas visualizar los campers que aprobaron el examen inicial")
-    enter = input("")
 
     for camper in listaaprobaron:
         for llave, valor in camper.items():
             print (f"{llave}: {valor}")
         print("-------------------------\n")
+    with open('datos.json', 'w', encoding="utf8") as x:
+            json.dump(data, x, indent=4)
+
+
+
+
+
+
+
 
 
 def listatrainerscampus():
@@ -38,13 +52,16 @@ def listatrainerscampus():
     data = json.load(x)
 
     listatrainers= data["Datos"]["Trainer_Principales"]
-    print("Por favor, presiona Enter si deseas visualizar los campers que aprobaron el examen inicial")
-    enter = input("")
+    print(" Por favor de enter para mostrar Campers en estado inscrito")
+    enter=input("")
 
     for trainers in listatrainers:
         for llave, valor in trainers.items():
             print (f"{llave}: {valor}")
         print("-------------------------\n")
+    with open('datos.json', 'w', encoding="utf8") as x:
+            json.dump(data, x , indent=4)
+    
 
 
 
@@ -78,13 +95,14 @@ def bajo_rendimiento():
            
 
     if aprobado:
-        print("Presione enter para mostrar lost de campers con bajo rendimiento")
-        enter = input("")
         
+        print(" Por favor de enter para mostrar Campers en estado inscrito")
+        enter=input("")
         # Print the information in a structured way
         for key, val in aprobado.items():
             print(f"{key}: {val}")
         print("-----------------------------------")
+        
 
     with open('Notas.json', 'w', encoding="utf8") as file:
         json.dump(mijson, file, indent=4)
