@@ -298,6 +298,7 @@ while True:
                 else:
                     print("Opción inválida")
             elif decision == 4:
+                limpiar_terminal()
                 print("**************************************************")
                 print("*                MODULO RUTAS                    *")
                 print("**************************************************")

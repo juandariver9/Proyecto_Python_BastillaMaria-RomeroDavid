@@ -152,4 +152,208 @@ def c_y_p_asociados_Node():
 
     with open('Salones.json', 'w', encoding="utf8") as x:
         json.dump(mijson, x, indent=2)
-        
+
+def CampersAprobDesaprobModulo():
+    import json
+    
+    
+    
+    print("Digite la ruta que desea mostrar")
+    print("1 Java")
+    print("2 Node")
+    print("3 Net")
+    Ruta = int(input("----->"))
+    
+    if Ruta == 1:
+        #Acá deberia hacer un for para buscar todos los de ruta JAVA
+        print("Desea ver en JAVA")
+        print("Que filtro desea consultar: ")
+        print("1. Fundamentos \t2. Programación Web")
+        print("3. Programacion Formal \t4. Bases de Datos \t5. Backend")
+        filtro = int(input("---->"))
+        if filtro == 1:
+            #Acá ya como está en ruta 
+            print("Desea ver en Fundamentos")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 2:
+            print("Desea ver en Programacion Web")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 3:
+            print("Desea ver en Programacion Formal")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 4:
+            print("Desea ver en Bases de Datos")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 5:
+            print("Desea ver en Backend")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        else:
+            print("No existe ese filtro")
+    elif Ruta == 2:
+        print("Desea ver en NODE")
+        print("Que filtro desea consultar: ")
+        print("1. Fundamentos \t2. Programación Web")
+        print("3. Programacion Formal \t4. Bases de Datos \t5. Backend")
+        filtro = int(input("---->"))
+        if filtro == 1:
+            print("Desea ver en Fundamentos")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 2:
+            print("Desea ver en Programacion Web")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 3:
+            print("Desea ver en Programacion Formal")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 4:
+            print("Desea ver en Bases de Datos")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 5:
+            print("Desea ver en Backend")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        else:
+            print("No existe ese filtro")
+    elif Ruta == 3:
+        print("Desea ver en NET")
+        print("Que filtro desea consultar: ")
+        print("1. Fundamentos \t2. Programación Web")
+        print("3. Programacion Formal \t4. Bases de Datos \t5. Backend")
+        filtro = int(input("---->"))
+        if filtro == 1:
+            print("Desea ver en Fundamentos")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 2:
+            print("Desea ver en Programacion Web")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 3:
+            print("Desea ver en Programacion Formal")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 4:
+            print("Desea ver en Bases de Datos")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        elif filtro == 5:
+            print("Desea ver en Backend")
+            print("1. Aprobaron")
+            print("2. Desaprobaron")
+            ApDes = int(input("----->"))
+            if ApDes == 1:
+                print("Mostrar Aprobados")
+            elif ApDes == 2:
+                print("Mostrar Desaprobados")
+            else:
+                print("No existe esa categoria")
+        else:
+            print("No existe ese filtro")
+    else:
+        print("No existe esa categoria")
