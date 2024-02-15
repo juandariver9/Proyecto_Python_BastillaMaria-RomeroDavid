@@ -76,15 +76,16 @@ def MainTrainersEliminar():
 
 def MainAsignarTrainers():
     import json
+
     def reindexar_IDs_entrenadores_secundarios(TrainersS):
         for i, trainer in enumerate(TrainersS, start=1):
             trainer['id'] = i
-            
+
     with open('datos.json', 'r', encoding="utf8") as infile:
         mijson = json.load(infile)
     with open('Salones.json','r', encoding="utf8") as infile:
         mijson2 = json.load(infile)
-    
+
     TrainersP = mijson['Datos']['Trainer_Principales']
     TrainersS = mijson['Datos']['Trainers_Secundarios']
 
@@ -103,7 +104,7 @@ def MainAsignarTrainers():
             print("Lista de entrenadores secundarios disponibles:")
             for trainer in TrainersS:
                 print(f"ID: {trainer['id']}, Nombre: {trainer['Nombre']}")
-            
+
             TS = int(input("Digite el ID del trainer secundario que desea pasar a principal: "))
 
             for trainer_index, trainer in enumerate(TrainersS):
@@ -113,30 +114,25 @@ def MainAsignarTrainers():
                     TrainersP[añadir - 1]['Identificacion'] = trainer['Identificacion']
                     TrainersP[añadir - 1]['Celular'] = trainer['Celular']
                     TrainersP[añadir - 1]['Telefono'] = trainer['Telefono']
-                    
+
                     # Actualizar el archivo Salones.json con el nombre del profesor
                     with open('Salones.json', 'r', encoding="utf8") as infile:
                         salones_json = json.load(infile)
-                    
-                    if añadir == 1:
-                        for salon_numero, salon_info in list(salones_json['Salones'].items())[:4]:
-                            salones_json['Salones'][salon_numero]['Profesor'] = trainer['Nombre']
-                    
-                    elif añadir == 2:
-                        for salon_numero, salon_info in list(salones_json['Salones'].items())[4:8]:
-                            salones_json['Salones'][salon_numero]['Profesor'] = trainer['Nombre']
-                    
-                    elif añadir == 3:
-                        for salon_numero, salon_info in list(salones_json['Salones'].items())[8:]:
-                            salones_json['Salones'][salon_numero]['Profesor'] = trainer['Nombre']
-                    
+
+                    for salon_numero, salon_info in salones_json['Salones'].items():
+                        if int(salon_numero) in range(4 * (añadir - 1) + 1, 4 * añadir + 1):
+                            salon_info['Profesor'] = trainer['Nombre']
+
                     with open('Salones.json', 'w', encoding="utf8") as outfile:
                         json.dump(salones_json, outfile, indent=2)
-                    
-                    
+
                     TrainersS.pop(trainer_index)
                     reindexar_IDs_entrenadores_secundarios(TrainersS)
-                    
+
+                    # Guardar los cambios en el archivo datos.json
+                    with open('datos.json', 'w', encoding="utf8") as outfile:
+                        json.dump(mijson, outfile, indent=2)
+
                     enter = input("")
                     break
             else:
@@ -149,4 +145,3 @@ def MainAsignarTrainers():
     else:
         print("Opción inválida. Debes seleccionar 1, 2 o 3.")
         x = input("Presione Enter para continuar")
-
