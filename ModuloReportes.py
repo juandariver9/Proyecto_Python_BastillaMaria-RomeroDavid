@@ -24,7 +24,7 @@ def ListaAprobaronExamen():
         data = json.load(x)
     
     listaaprobaron = [camper for camper in data["Datos"]["Matriculados"] if camper["Estado"] == "Aprobado"]
-    print(" Por favor de enter para mostrar Campers en estado inscrito")
+    print(" Por favor de enter para mostrar Campers que aprobaron el examen inicial")
     enter=input("")
 
 
@@ -43,7 +43,7 @@ def listatrainerscampus():
     data = json.load(x)
 
     listatrainers= data["Datos"]["Trainer_Principales"]
-    print(" Por favor de enter para mostrar Campers en estado inscrito")
+    print(" Por favor de enter para mostrar lista de trainers")
     enter=input("")
 
     for trainers in listatrainers:
@@ -54,46 +54,57 @@ def listatrainerscampus():
             json.dump(data, x , indent=4)
     
 
+import json
+
 def bajo_rendimiento():
-    import json
-    with open('Notas.json', 'r', encoding="utf8") as file:
-        mijson = json.load(file)
+    try:
+        with open('Notas.json', 'r', encoding="utf8") as file:
+            mijson = json.load(file)
 
-    T = mijson['Notas']['Matriculados']
-    
-    aprobado = None  # Initialize aprobado outside the loop
+        estudiantes = mijson.get('Notas', {}).get('Matriculados', [])
 
-    for index, value in enumerate(T):
-        if 'Rendimiento_Fundamentos' in value and value['Rendimiento_Fundamentos'] == "Bajo rendimiento" or 'Rendimiento_programacion_web' in value and value['Rendimiento_programacion_web'] == "Bajo rendimiento" or 'Rendimiento_programacion_formal' in value and value['Rendimiento_programacion_formal'] == "Bajo rendimiento"or 'Rendimiento_Base_datos' in value and value['Rendimiento_Base_datos'] == "Bajo rendimiento" or 'Rendimiento_Backend' in value and value['Rendimiento_Backend'] == "Bajo rendimiento":
-            aprobado = {
-                "Nombre": value['Nombre'],
-                "Apellido1": value['Apellido1'],
-                "Telefono": value['Telefono'],
-                "Nota_final_Fundamentos": value['Nota_final_Fundamentos'],
-                "Rendimiento_Fundamentos": value['Rendimiento_Fundamentos'],
-                "Nota_final_Programacion_web": value['Nota_final_Programacion_web'],
-                "Rendimiento_programacion_web": value['Rendimiento_programacion_web'],
-                "Nota_final_Programacion_formal": value['Nota_final_Programacion_formal'],
-                "Rendimiento_programacion_formal": value['Rendimiento_programacion_formal'],
-                "Nota_final_Bases_datos": value['Nota_final_Bases_datos'],
-                "Rendimiento_Base_datos": value['Rendimiento_Base_datos'],
-                "Nota_final_Backend": value['Nota_final_Backend'],
-                "Rendimiento_Backend": value['Rendimiento_Backend'],
-            }
-           
+        aprobados = []
 
-    if aprobado:
-        
-        print(" Por favor de enter para mostrar Campers en estado inscrito")
-        enter=input("")
-        # Print the information in a structured way
-        for key, val in aprobado.items():
-            print(f"{key}: {val}")
-        print("-----------------------------------")
-        
+        for estudiante in estudiantes:
+            materias_rendimiento = [
+                'Rendimiento_Fundamentos',
+                'Rendimiento_programacion_web',
+                'Rendimiento_programacion_formal',
+                'Rendimiento_Base_datos',
+                'Rendimiento_Backend'
+            ]
+            
+            materias_bajo_rendimiento = [
+                materia for materia in materias_rendimiento if materia in estudiante and estudiante[materia] == "Bajo rendimiento"
+            ]
 
-    with open('Notas.json', 'w', encoding="utf8") as file:
-        json.dump(mijson, file, indent=4)
+            if materias_bajo_rendimiento:
+                aprobados.append({
+                    "Nombre": estudiante['Nombre'],
+                    "Apellido1": estudiante['Apellido1'],
+                    "Telefono": estudiante['Telefono'],
+                    "Materias_con_bajo_rendimiento": materias_bajo_rendimiento,
+                })
+
+        if aprobados:
+            print("Estudiantes con bajo rendimiento:")
+            for estudiante in aprobados:
+                print("-----------------------------------")
+                for key, val in estudiante.items():
+                    if isinstance(val, list):
+                        val = ', '.join(val)
+                    print(f"{key}: {val}")
+            print("-----------------------------------")
+
+            with open('Notas.json', 'w', encoding="utf8") as file:
+                json.dump(mijson, file, indent=4, ensure_ascii=False)
+
+        else:
+            print("No hay estudiantes con bajo rendimiento.")
+
+    except FileNotFoundError:
+        print("Archivo 'Notas.json' no encontrado.")
+
 
 
 

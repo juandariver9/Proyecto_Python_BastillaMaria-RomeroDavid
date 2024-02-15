@@ -5,6 +5,7 @@ import TrainersHorario
 import Modulonotas
 import ModuloReportes
 import modulorutas
+import ModuloRalto
 print("**************************************************")
 print("*                   Bienvenido                   *")
 print("**************************************************")
@@ -45,7 +46,9 @@ while True:
                 print(" ")
                 print("1. Inscribir Camper \t 2. Matricular Camper")
                 print(" ")
-                print("3. Rendimiento Camper\t 4. Ir al modulo anterior")
+                print("3. Rendimiento Camper\t 4. Mostrar lista de campers Riesgo alto")
+                print(" ")
+                print("5. Modulo anterior")
 
                 decision_camper = int(input("--->"))
 
@@ -114,8 +117,12 @@ while True:
                         print(" Mirar rendimiento de camper")
                         print(Modulonotas.Mostrar_rendimiento())
                         x=input("")
-                elif decision_camper == 4:
+                elif decision_camper == 5:
                     print("Salir")
+                elif decision_camper == 4:
+                    print("Lista de estudiantes en Riesgo alto")
+                    print(ModuloRalto.Riesgo_rendimiento())
+                    x=input("")
                 else:
                     print("Opción inválida")
 
