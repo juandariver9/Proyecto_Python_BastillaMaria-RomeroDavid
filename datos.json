@@ -80,6 +80,38 @@
         "Trainer": "Karen",
         "Ruta": "NodeCore",
         "Salon": "2"
+      },
+      {
+        "Nombre": "e",
+        "Apellido1": "e",
+        "Apellido2": "e",
+        "Direccion": "e",
+        "Nombre Acudiente": "",
+        "Celular": 23,
+        "Telefono": 1,
+        "Estado": "Reprobado",
+        "Fecha de inicio": "12",
+        "Fecha de finalizacion": "45",
+        "Riesgo": "Riesgo alto",
+        "Trainer": "Karen",
+        "Ruta": "NodeCore",
+        "Salon": "2"
+      },
+      {
+        "Nombre": "Juanito",
+        "Apellido1": "Alima\u00f1a",
+        "Apellido2": "Ca\u00f1a",
+        "Direccion": "4",
+        "Nombre Acudiente": "",
+        "Celular": 5,
+        "Telefono": 6,
+        "Estado": "Reprobado",
+        "Fecha de inicio": "12",
+        "Fecha de finalizacion": "45",
+        "Riesgo": "Riesgo alto",
+        "Trainer": "",
+        "Ruta": "",
+        "Salon": ""
       }
     ],
     "Trainer_Principales": [

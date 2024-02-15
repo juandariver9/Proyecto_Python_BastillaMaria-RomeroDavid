@@ -1,18 +1,5 @@
 {
   "datos": {
-    "inscripciones": [
-      {
-        "id": 2,
-        "Identificacion": 23,
-        "Nombre": "e",
-        "Apellido1": "e",
-        "Apellido2": "e",
-        "Direccion": "e",
-        "Acudiente": "",
-        "Celular": 23,
-        "Telefono": 1,
-        "Estado": "Inscrito"
-      }
-    ]
+    "inscripciones": []
   }
 }

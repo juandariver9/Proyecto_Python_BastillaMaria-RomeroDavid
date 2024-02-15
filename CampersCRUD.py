@@ -27,8 +27,6 @@ def MainCamperAñadir():
     
     mainCamper()
 
-import json
-
 def MainCamperAprobados():
     with open('inscritos.json', 'r', encoding="utf8") as file:
         mijson = json.load(file)
@@ -53,6 +51,9 @@ def MainCamperAprobados():
     riesgoM = "Riesgo alto"
     y = int(input("Escriba el ID del estudiante a actualizar: "))
     
+    salon_info = None
+    salon_numero = None
+
     for i, inscripcion in enumerate(listainscritos):
         if inscripcion['id'] == y:
             notapractica = int(input("Digite la nota de la prueba práctica: "))
@@ -74,17 +75,19 @@ def MainCamperAprobados():
                 "Nota_final_Backend": "",
                 "Rendimiento_Backend": ""
             }
-            
-            # Buscar un salón con menos de 33 alumnos y agregar al alumno
-            for salon_numero, salon_info in Salones.items():
-                if len(salon_info["Alumnos"]) < 33:
-                    aprobado1["Salon"] = salon_numero
-                    salon_info["Alumnos"].append(aprobado1)
-                    print(f"El estudiante {inscripcion['Nombre']} se agregó al salón {salon_numero}.")
-                    break
-            else:
-                print("No hay salones disponibles con menos de 33 alumnos.")
-                # Aquí puedes agregar la lógica para manejar el caso en el que no haya salones disponibles.
+            if notafinal >= 60:
+                # Buscar un salón con menos de 33 alumnos y agregar al alumno
+                for salon_numero, salon_info in Salones.items():
+                    if len(salon_info["Alumnos"]) < 33:
+                        aprobado1["Salon"] = salon_numero
+                        salon_info["Alumnos"].append(aprobado1)
+                        print(f"El estudiante {inscripcion['Nombre']} se agregó al salón {salon_numero}.")
+                        break
+                else:
+                    print("No hay salones disponibles con menos de 33 alumnos.")
+                    # Aquí puedes agregar la lógica para manejar el caso en el que no haya salones disponibles.
+                    salon_info = None
+                    salon_numero = None
             
             aprobado = {
                 "Nombre": inscripcion['Nombre'],
@@ -98,10 +101,20 @@ def MainCamperAprobados():
                 "Fecha de inicio": input("Escriba la fecha de inicio del estudiante: "),
                 "Fecha de finalizacion": input("Escriba la fecha de finalización: "),
                 "Riesgo": riesgoB if notafinal >= 60 else riesgoM,
-                "Trainer": salon_info["Profesor"],
-                "Ruta" : salon_info["Ruta"],
-                "Salon": salon_numero
             }
+
+            try:
+                aprobado["Trainer"] = salon_info["Profesor"]
+            except (KeyError, TypeError):
+                aprobado["Trainer"] = ""
+
+            try:
+                aprobado["Ruta"] = salon_info["Ruta"]
+                aprobado["Salon"] = salon_numero
+            except (KeyError, TypeError):
+                aprobado["Ruta"] = ""
+                aprobado["Salon"] = ""
+                
             # Resto del código
             mijson2['Datos']['Matriculados'].append(aprobado)
             if notafinal >= 60:
