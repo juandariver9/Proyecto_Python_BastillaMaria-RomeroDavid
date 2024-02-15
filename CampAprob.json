@@ -48,6 +48,22 @@
         "Trainer": "Karen",
         "Ruta": "NodeCore",
         "Salon": "2"
+      },
+      {
+        "Nombre": "e",
+        "Apellido1": "e",
+        "Apellido2": "e",
+        "Direccion": "e",
+        "Nombre Acudiente": "",
+        "Celular": 23,
+        "Telefono": 1,
+        "Estado": "Aprobado",
+        "Fecha de inicio": "45",
+        "Fecha de finalizacion": "34",
+        "Riesgo": "Sin riesgo",
+        "Trainer": "Karen",
+        "Ruta": "Java",
+        "Salon": "1"
       }
     ]
   }

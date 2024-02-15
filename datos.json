@@ -89,6 +89,7 @@
         "Nombre Acudiente": "",
         "Celular": 23,
         "Telefono": 1,
+<<<<<<< HEAD
         "Estado": "Reprobado",
         "Fecha de inicio": "12",
         "Fecha de finalizacion": "45",
@@ -112,6 +113,15 @@
         "Trainer": "",
         "Ruta": "",
         "Salon": ""
+=======
+        "Estado": "Aprobado",
+        "Fecha de inicio": "45",
+        "Fecha de finalizacion": "34",
+        "Riesgo": "Sin riesgo",
+        "Trainer": "Karen",
+        "Ruta": "Java",
+        "Salon": "1"
+>>>>>>> b29ab5a1b728d02c7be172ae2740b620c9b1ff41
       }
     ],
     "Trainer_Principales": [

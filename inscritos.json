@@ -1,5 +1,22 @@
 {
   "datos": {
+<<<<<<< HEAD
     "inscripciones": []
+=======
+    "inscripciones": [
+      {
+        "id": 3,
+        "Identificacion": 2,
+        "Nombre": "r",
+        "Apellido1": "r",
+        "Apellido2": "r",
+        "Direccion": "r",
+        "Acudiente": "",
+        "Celular": 23,
+        "Telefono": 3,
+        "Estado": "Inscrito"
+      }
+    ]
+>>>>>>> b29ab5a1b728d02c7be172ae2740b620c9b1ff41
   }
 }
