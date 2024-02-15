@@ -5,11 +5,8 @@ def Listainscritos ():
     listains=mijson[ "datos"]["inscripciones"]
     print(" Por favor de enter para mostrar Campers en estado inscrito")
     enter=input("")
-    print(listains)
     for i in listains:
-        print("holiiiii1")
         for llave,valor in i.items():
-            print("holiiiii2")
             print (f"{llave}: {valor}")
         print("-------------------------\n")
     with open('Inscritos.json', 'w', encoding="utf8") as x:
@@ -164,207 +161,44 @@ def c_y_p_asociados_Node():
     with open('Salones.json', 'w', encoding="utf8") as x:
         json.dump(mijson, x, indent=2)
 
-def CampersAprobDesaprobModulo():
+def Reporte6():
     import json
-    
-    
-    
-    print("Digite la ruta que desea mostrar")
-    print("1 Java")
-    print("2 Node")
-    print("3 Net")
-    Ruta = int(input("----->"))
-    
-    if Ruta == 1:
-        #Acá deberia hacer un for para buscar todos los de ruta JAVA
-        print("Desea ver en JAVA")
-        print("Que filtro desea consultar: ")
-        print("1. Fundamentos \t2. Programación Web")
-        print("3. Programacion Formal \t4. Bases de Datos \t5. Backend")
-        filtro = int(input("---->"))
-        if filtro == 1:
-            #Acá ya como está en ruta 
-            print("Desea ver en Fundamentos")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 2:
-            print("Desea ver en Programacion Web")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 3:
-            print("Desea ver en Programacion Formal")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 4:
-            print("Desea ver en Bases de Datos")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 5:
-            print("Desea ver en Backend")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        else:
-            print("No existe ese filtro")
-    elif Ruta == 2:
-        print("Desea ver en NODE")
-        print("Que filtro desea consultar: ")
-        print("1. Fundamentos \t2. Programación Web")
-        print("3. Programacion Formal \t4. Bases de Datos \t5. Backend")
-        filtro = int(input("---->"))
-        if filtro == 1:
-            print("Desea ver en Fundamentos")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 2:
-            print("Desea ver en Programacion Web")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 3:
-            print("Desea ver en Programacion Formal")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 4:
-            print("Desea ver en Bases de Datos")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 5:
-            print("Desea ver en Backend")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        else:
-            print("No existe ese filtro")
-    elif Ruta == 3:
-        print("Desea ver en NET")
-        print("Que filtro desea consultar: ")
-        print("1. Fundamentos \t2. Programación Web")
-        print("3. Programacion Formal \t4. Bases de Datos \t5. Backend")
-        filtro = int(input("---->"))
-        if filtro == 1:
-            print("Desea ver en Fundamentos")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 2:
-            print("Desea ver en Programacion Web")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 3:
-            print("Desea ver en Programacion Formal")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 4:
-            print("Desea ver en Bases de Datos")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        elif filtro == 5:
-            print("Desea ver en Backend")
-            print("1. Aprobaron")
-            print("2. Desaprobaron")
-            ApDes = int(input("----->"))
-            if ApDes == 1:
-                print("Mostrar Aprobados")
-            elif ApDes == 2:
-                print("Mostrar Desaprobados")
-            else:
-                print("No existe esa categoria")
-        else:
-            print("No existe ese filtro")
-    else:
-        print("No existe esa categoria")
+
+    with open('Salones.json', 'r', encoding="utf8") as file:
+        mijson = json.load(file)
+
+    # Inicializar un diccionario para almacenar resultados por módulo, ruta y entrenador
+    resultados_por_modulo = {}
+
+    # Recorrer los salones y alumnos
+    for salon, datos_salon in mijson["Salones"].items():
+        ruta = datos_salon["Ruta"]
+        profesor = datos_salon["Profesor"]
+        
+        for alumno in datos_salon["Alumnos"]:
+            # Verificar si la nota es mayor o igual a 60 en cada módulo
+            for modulo in ["Fundamentos", "Programacion_web", "Programacion_formal", "Bases_datos", "Backend"]:
+                nota_modulo = alumno[f"Nota_final_{modulo}"]
+                try:
+                    nota = float(nota_modulo)
+                    if nota >= 60:
+                        # Incrementar contador de aprobados
+                        resultados_por_modulo.setdefault(modulo, {}).setdefault(ruta, {}).setdefault(profesor, {'Aprobados': 0, 'Perdidos': 0})['Aprobados'] += 1
+                    else:
+                        # Incrementar contador de perdidos
+                        resultados_por_modulo.setdefault(modulo, {}).setdefault(ruta, {}).setdefault(profesor, {'Aprobados': 0, 'Perdidos': 0})['Perdidos'] += 1
+                except ValueError:
+                    # Manejar casos donde la nota no es un número válido
+                    pass
+
+    # Mostrar resultados por módulo, ruta y entrenador
+    for modulo in ["Fundamentos", "Programacion_web", "Programacion_formal", "Bases_datos", "Backend"]:
+        print(f"\nMódulo: {modulo}")
+        for ruta in ["Java", "NodeCore", "NetCore"]:
+            for profesor, resultados in resultados_por_modulo.get(modulo, {}).get(ruta, {}).items():
+                aprobados = resultados['Aprobados']
+                perdidos = resultados['Perdidos']
+                print(f"Ruta: {ruta}, Profesor: {profesor} - Campers Aprobados: {aprobados}, Campers Perdidos: {perdidos}")
+
+# Llamar a la función
+Reporte6()
