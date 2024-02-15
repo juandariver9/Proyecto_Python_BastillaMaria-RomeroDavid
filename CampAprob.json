@@ -1,70 +1,7 @@
 {
   "Datos": {
     "Aprobados": [
-      {
-        "Nombre": "Maria",
-        "Apellido1": "Jose",
-        "Apellido2": "Bastilla",
-        "Direccion": "er",
-        "Nombre Acudiente": "",
-        "Celular": 234,
-        "Telefono": 1,
-        "Estado": "Aprobado",
-        "Fecha de inicio": "23452",
-        "Fecha de finalizacion": "123",
-        "Riesgo": "Sin riesgo",
-        "Trainer": "Karen",
-        "Ruta": "NodeCore",
-        "Salon": "2"
-      },
-      {
-        "Nombre": "Sandra osorio",
-        "Apellido1": "e",
-        "Apellido2": "e",
-        "Direccion": "e",
-        "Nombre Acudiente": "",
-        "Celular": 1,
-        "Telefono": 3,
-        "Estado": "Aprobado",
-        "Fecha de inicio": "23",
-        "Fecha de finalizacion": "2",
-        "Riesgo": "Sin riesgo",
-        "Trainer": "Karen",
-        "Ruta": "NodeCore",
-        "Salon": "2"
-      },
-      {
-        "Nombre": "Daniel",
-        "Apellido1": "Bastilla",
-        "Apellido2": "e",
-        "Direccion": "e",
-        "Nombre Acudiente": "",
-        "Celular": 56,
-        "Telefono": 4,
-        "Estado": "Aprobado",
-        "Fecha de inicio": "2",
-        "Fecha de finalizacion": "2",
-        "Riesgo": "Sin riesgo",
-        "Trainer": "Karen",
-        "Ruta": "NodeCore",
-        "Salon": "2"
-      },
-      {
-        "Nombre": "e",
-        "Apellido1": "e",
-        "Apellido2": "e",
-        "Direccion": "e",
-        "Nombre Acudiente": "",
-        "Celular": 23,
-        "Telefono": 1,
-        "Estado": "Aprobado",
-        "Fecha de inicio": "45",
-        "Fecha de finalizacion": "34",
-        "Riesgo": "Sin riesgo",
-        "Trainer": "Karen",
-        "Ruta": "Java",
-        "Salon": "1"
-      }
+      
     ]
   }
 }

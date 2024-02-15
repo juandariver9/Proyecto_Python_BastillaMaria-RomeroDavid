@@ -1,6 +1,5 @@
-import json
-
 def MainCamperAñadir():
+    import json
     with open('inscritos.json', 'r', encoding="utf8") as file:
         mijson = json.load(file)
     
@@ -28,6 +27,7 @@ def MainCamperAñadir():
     mainCamper()
 
 def MainCamperAprobados():
+    import json
     with open('inscritos.json', 'r', encoding="utf8") as file:
         mijson = json.load(file)
     
